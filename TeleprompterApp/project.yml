@@ -1,0 +1,35 @@
+name: Teleprompter
+options:
+  bundleIdPrefix: com.personal
+  deploymentTarget:
+    iOS: "16.0"
+  developmentLanguage: zh-Hant
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Teleprompter:
+    type: application
+    platform: iOS
+    sources:
+      - Teleprompter
+    info:
+      path: Teleprompter/Info.plist
+      properties:
+        CFBundleDisplayName: 提詞機
+        CFBundleLocalizations:
+          - zh-Hant
+          - en
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: 「提詞機」需要使用前置鏡頭，才能讓你一邊看稿一邊拍攝影片。
+        NSMicrophoneUsageDescription: 「提詞機」需要使用麥克風，才能在拍攝影片時錄下你的聲音。
+        NSPhotoLibraryAddUsageDescription: 「提詞機」需要權限，才能把拍好的影片儲存到你的「相片」圖庫。
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.personal.teleprompter
